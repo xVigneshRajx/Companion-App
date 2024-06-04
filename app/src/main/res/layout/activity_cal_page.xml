@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".CalPage">
+
+    <TextView
+        android:layout_width="255dp"
+        android:layout_height="42dp"
+        android:text="GPA Calculator"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="28dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307">
+
+        <TextView
+            android:id="@+id/subjectOne"
+            android:layout_width="59dp"
+            android:layout_height="17dp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/subject1"
+            app:layout_constraintBottom_toTopOf="@id/subjectTwo"
+            app:layout_constraintLeft_toLeftOf="@+id/container"
+            app:layout_constraintRight_toLeftOf="@id/grade"
+            app:layout_constraintTop_toTopOf="@+id/container" />
+
+        <TextView
+            android:id="@+id/subjectTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/subject2"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/subjectThree"
+            app:layout_constraintLeft_toLeftOf="@+id/container"
+            app:layout_constraintRight_toLeftOf="@id/grade2"
+            app:layout_constraintTop_toBottomOf="@+id/subjectOne" />
+
+        <TextView
+            android:id="@+id/subjectThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"
+            android:text="@string/subject3"
+            app:layout_constraintBottom_toTopOf="@id/subjectFour"
+            app:layout_constraintLeft_toLeftOf="@+id/container"
+            app:layout_constraintRight_toLeftOf="@id/grade3"
+            app:layout_constraintTop_toBottomOf="@id/subjectTwo" />
+
+        <TextView
+            android:id="@+id/subjectFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:text="@string/subject4"
+            app:layout_constraintBottom_toTopOf="@id/subjectFive"
+            app:layout_constraintLeft_toLeftOf="@+id/container"
+            app:layout_constraintRight_toLeftOf="@id/grade4"
+            app:layout_constraintTop_toBottomOf="@+id/subjectThree"
+
+            />
+
+        <TextView
+            android:id="@+id/subjectFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subject5"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/subjectFour"
+            app:layout_constraintLeft_toLeftOf="@+id/container"
+            app:layout_constraintRight_toLeftOf="@id/grade5"
+            app:layout_constraintTop_toBottomOf="@id/subjectSix"
+
+            />
+
+        <TextView
+            android:id="@+id/subjectSix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/subject6"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/container"
+            app:layout_constraintLeft_toLeftOf="@+id/container"
+            app:layout_constraintRight_toLeftOf="@id/grade6"
+            app:layout_constraintTop_toBottomOf="@id/subjectFive" />
+
+        <Spinner
+            android:id="@+id/grade"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:entries="@array/grades"
+            app:layout_constraintBottom_toTopOf="@+id/grade2"
+            app:layout_constraintLeft_toRightOf="@id/subjectOne"
+            app:layout_constraintRight_toRightOf="@+id/container"
+            app:layout_constraintTop_toTopOf="@+id/container" />
+
+        <Spinner
+            android:id="@+id/grade2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/grades"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/grade3"
+            app:layout_constraintLeft_toRightOf="@id/subjectTwo"
+            app:layout_constraintRight_toRightOf="@+id/container"
+            app:layout_constraintTop_toBottomOf="@+id/grade" />
+
+        <Spinner
+            android:id="@+id/grade3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/grades"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/grade4"
+            app:layout_constraintLeft_toRightOf="@id/subjectThree"
+            app:layout_constraintRight_toRightOf="@+id/container"
+            app:layout_constraintTop_toBottomOf="@id/grade2" />
+
+        <Spinner
+            android:id="@+id/grade4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/grades"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/grade5"
+            app:layout_constraintLeft_toRightOf="@id/subjectFour"
+            app:layout_constraintRight_toRightOf="@+id/container"
+            app:layout_constraintTop_toBottomOf="@id/grade3" />
+
+        <Spinner
+            android:id="@+id/grade5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/grades"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/grade6"
+            app:layout_constraintLeft_toRightOf="@id/subjectFive"
+            app:layout_constraintRight_toRightOf="@+id/container"
+            app:layout_constraintTop_toBottomOf="@id/grade4" />
+
+        <Spinner
+            android:id="@+id/grade6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/grades"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/container"
+            app:layout_constraintLeft_toRightOf="@id/subjectSix"
+            app:layout_constraintRight_toRightOf="@+id/container"
+            app:layout_constraintTop_toBottomOf="@id/grade5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="140dp"
+        android:layout_height="143dp"
+        app:layout_constraintBottom_toTopOf="@+id/Result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/container"
+        app:layout_constraintVertical_bias="0.547"
+        app:srcCompat="@drawable/loginbtn" />
+
+    <TextView
+        android:id="@+id/cgpa"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:background="@color/btn"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/Result"
+        android:text="@string/cgpaValue"
+        />
+
+    <Button
+        android:id="@+id/Result"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/button"
+        app:cornerRadius="55dp"
+        app:layout_constraintTop_toBottomOf="@+id/cgpa"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/result"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
